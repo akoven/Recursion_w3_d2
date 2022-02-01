@@ -14,24 +14,26 @@ reverse(""); // ""
 
 // your code here
 
+// const reverse = (str, newString = "") => {
+//   if (str.length === 0) {
+//     return newString;
+//   }
+//   let array = str.split("");
+//   let newFirst = array.pop();
+//   newString += newFirst;
+//   let arrayString = array.join("");
+//   return reverse(arrayString, newString);
+// };
+
 const reverse = (str) => {
   if (str.length === 0) {
-    return "";
-  }
-
-  if (str.length === 1) {
     return str;
   }
-  // ['h','o','u','s','e']
-  let array = str.split("");
-  let newFirst = array.pop();
-  let newString = "";
-  if (newString.length < str.length) {
-    newString += newFirst;
-    //esuoh
-  }
-  return reverse(str);
 };
+// e
+//hous
+
+console.log(reverse("house")); // "esuoh"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
