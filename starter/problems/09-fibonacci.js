@@ -27,9 +27,9 @@ const fib = (num) => {
 
   // 4
   return fib(num - 2) + fib(num - 1);
-  //fib( 2 )      // fib ( 3 )
-  // fib ( 3 - 2 ) + fib ( 3 - 1 )
-  // fib ( 1 )  + fib ( 2 )
+  //fib( 2 )                   // fib ( 3 )
+                               // fib ( 3 - 2 ) + fib ( 3 - 1 )
+                               // fib ( 1 )  + fib ( 2 )
   //        1                           ( 1 + 1 )
 };
 
