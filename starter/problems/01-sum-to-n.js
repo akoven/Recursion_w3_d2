@@ -10,8 +10,24 @@ sumToN(1)  // returns 1
 sumToN(9)  // returns 45
 sumToN(-8)  // returns null
 ***********************************************************************/
+const sumToN = function(n){
+  //base case
+  if(n < 0){
+    return null;
+  }
 
-// your code here
+  if(n === 0){
+    return 0;
+  }
+
+  return n+sumToN(n-1);
+}
+
+console.log(sumToN(5)) // returns 15
+console.log(sumToN(1))  // returns 1
+console.log(sumToN(9))  // returns 45
+console.log(sumToN(-8))  // returns null
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

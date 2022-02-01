@@ -12,8 +12,9 @@ iceCreamShop(['moose tracks'], 'moose tracks'); // true
 iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
 
+const iceCreamShop = (flavors, favorite) => {
 
-// your code here
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
