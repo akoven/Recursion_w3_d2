@@ -20,11 +20,17 @@ fibonacci(10); // 55
 ***********************************************************************/
 
 // your code here
-  
+
+const fib = (num) => {
+  if (num <= 0) return null;
+  if (num === 1 || num === 2) return 1;
+
+  return 1 + fib(num - 1);
+};
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = fibonacci;
 } catch (e) {
   module.exports = null;
 }
-  

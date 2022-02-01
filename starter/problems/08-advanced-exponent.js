@@ -39,12 +39,46 @@ be recursively calling `advancedExponent`. Find a way to visually see how many
 times `advancedExponent` is being recursively called.
 ***********************************************************************/
 
-
 function advancedExponent(b, n) {
-  // your code here
+  if (n === 0) return 1;
+
+  if (n === 1) {
+    // console.log(`n = ${n}`);
+    // console.log(`b = ${b}`);
+    // console.log("--------------------");
+    return b;
+  }
+
+  if (n % 2 === 0) {
+    // console.log(`n = ${n}`);
+    // console.log(`b = ${b}`);
+    // console.log("--------------------");
+    return advancedExponent(b, n / 2) ** 2;
+    //exponent(b, n) // exponent(b, n / 2) ** 2             [for even n]
+  }
+
+  if (n % 2 !== 0) {
+    // console.log(`n = ${n}`);
+    // console.log(`b = ${b}`);
+    // console.log("--------------------");
+    return b * advancedExponent(b, (n - 1) / 2) ** 2;
+    //exponent(b, n) // b * (exponent(b, (n - 1) / 2) ** 2) [for odd n]
+  }
 }
 
-
+console.log(advancedExponent(2, 0)); // 1
+console.log(advancedExponent(2, 1)); // 2
+console.log(advancedExponent(2, 2)); // 4
+console.log(advancedExponent(2, 3)); // 8
+console.log(advancedExponent(2, 4)); // 16
+console.log(advancedExponent(2, 5)); // 32
+console.log(advancedExponent(2, 6)); // 64
+console.log(advancedExponent(2, 7)); // 128
+console.log(advancedExponent(2, 8)); // 256
+console.log(advancedExponent(2, 9)); // 512
+console.log(advancedExponent(2, 10)); // 1024
+console.log(advancedExponent(2, 11)); // 2048
+console.log(advancedExponent(2, 12)); // 4096
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = advancedExponent;
