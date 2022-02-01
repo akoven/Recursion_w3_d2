@@ -12,20 +12,19 @@ addToTwelve([1, 12, 4, 7, 6]); // false
 addToTwelve([1]); // false
 ***********************************************************************/
 const addToTwelve = (arr) =>{
-  // if(arr.length <= 1){
-  //   return false;
-  // }
-
-  // let index = arr.length - 1;
-  if(arr.length !== 0){
-    arr.forEach((ele,i) => {
-      return (ele+arr[i+1] === 12)
-    });
-    let shiftedArr = arr.slice(2);
-    // return shiftedArr;
-    return addToTwelve(shiftedArr);
+  if(arr.length <= 1){
+    return false;
   }
+
+
+    let lastEl = arr.pop();
+    if(lastEl + arr[arr.length - 1] === 12){
+      return true;
+    }
+
+    return addToTwelve(shiftedArr);
 }
+
 
 console.log(addToTwelve([1, 3, 4, 7, 5])); // true
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
