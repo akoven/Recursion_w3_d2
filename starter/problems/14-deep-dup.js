@@ -42,9 +42,8 @@ const deepDup = (arr) =>{
   return [ele].concat(deepDup(arr));
 };
 
-let arr = [[1], [2, [3]]];
+let arr = [[1], [2, [3]]];//this array length is 2 so deepDup is recused only twice before encountering the base case. The first ele is [1], the second ele is [2,[3]]
 duped = deepDup(arr);
-
 console.log(arr[0] === duped[0]) // false
 console.log(arr[1] === duped[1])
 // console.log(deepDup(arr));
