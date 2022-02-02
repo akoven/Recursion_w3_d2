@@ -1,7 +1,7 @@
 /***********************************************************************
 Write a function called `subsets` that will return all subsets of an array.
 
-Examples: 
+Examples:
 
 subsets([]) // [[]]
 subsets([1]) // [[], [1]]
@@ -13,8 +13,16 @@ Hint: For subsets([1, 2, 3]), there are two kinds of subsets:
   2. For every subset that does not contain 3, there is also a corresponding
      subset that is the same, except it also does contain 3.
 ***********************************************************************/
+const subsets = (arr) => {
+  if(arr.length === 0){
+    return [];
+  }
 
-// your code here
+
+
+
+
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

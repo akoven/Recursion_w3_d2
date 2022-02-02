@@ -35,7 +35,7 @@ console.log(x[0] === y[0]) // true
 
 
 ***********************************************************************/
-const deepDup = (arr, newArr = []) =>{
+const deepDup = (arr) =>{
   if(arr.length === 0) return [];
 
   let ele = arr.shift();
