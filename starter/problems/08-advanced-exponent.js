@@ -53,7 +53,7 @@ function advancedExponent(b, n) {
     // console.log(`n = ${n}`);
     // console.log(`b = ${b}`);
     // console.log("--------------------");
-    return advancedExponent(b, n / 2) ** 2;
+    return advancedExponent(b, n/2)**2;
     //exponent(b, n) // exponent(b, n / 2) ** 2             [for even n]
   }
 
@@ -61,7 +61,7 @@ function advancedExponent(b, n) {
     // console.log(`n = ${n}`);
     // console.log(`b = ${b}`);
     // console.log("--------------------");
-    return b * advancedExponent(b, (n - 1) / 2) ** 2;
+    return b*(advancedExponent(b, (n - 1) / 2)) ** 2;
     //exponent(b, n) // b * (exponent(b, (n - 1) / 2) ** 2) [for odd n]
   }
 }

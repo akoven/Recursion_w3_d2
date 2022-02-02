@@ -15,7 +15,7 @@ const flatten = (arr) =>{
   }
 
   let ele = arr.shift();
-  console.log(ele);
+  // console.log(ele);
   if(Array.isArray(ele)){
     ele = flatten(ele);
     return ele;

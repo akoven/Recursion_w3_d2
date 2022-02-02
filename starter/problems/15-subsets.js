@@ -13,17 +13,17 @@ Hint: For subsets([1, 2, 3]), there are two kinds of subsets:
   2. For every subset that does not contain 3, there is also a corresponding
      subset that is the same, except it also does contain 3.
 ***********************************************************************/
-const subsets = (arr) => {
+const subsets = (arr, subset = []) => {
   if(arr.length === 0){
-    return [];
+    return [[]];
   }
 
-
-
-
-
+  subset.push(arr);
+  return subsets(arr,subset);
 }
 
+console.log(subsets([]));
+console.log(subsets([1])) // [[], [1]]
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = subsets;
